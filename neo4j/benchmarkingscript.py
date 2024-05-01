@@ -24,7 +24,7 @@ def benchmark_query(query, num_runs=10):
 # Running benchmarks
 results = {}
 for name, query in queries.items():
-    avg_time = benchmark_query(query, num_runs=100)  # Adjust num_runs as needed
+    avg_time = benchmark_query(query, num_runs=10000)  # Adjust num_runs as needed
     results[name] = avg_time
 
 # Output the results
