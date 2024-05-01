@@ -1,14 +1,9 @@
 ## Steps to reproduce
 
 - Download OSM data
-- Install sqlite3
-- Convert OSM data into SQLite tables: `ogr2ogr -f SQLite -dsco SPATIALITE=YES <name>.sqlite <path>.osm `
-- Install Spatialite: `brew install spatialite-tools`
-- Create network data: `spatialite_osm_net -o datasets/urbana.osm -d databases/urbana-network.sqlite -T roads`
-- Create routing data: `SELECT CreateRouting('route_data', 'route', 'roads', 'node_from', 'node_to', 'geometry', 'cost', 'name', 1, 1);`
-- Run Spatialite: `spatialite databases/urbana.sqlite`
-- ATTACH DATABASE 'databases/urbana-network.sqlite' AS network;
-- Run queries: `.read queries/query1.sql`
+- Install PostGres with PostGIS extension: `brew install postgresql` `brew install postgis`
+- Convert OSM data into Postgres Tables: ``
+
 
 ## Databases
 
